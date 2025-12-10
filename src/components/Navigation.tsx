@@ -18,10 +18,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
 
           {/* Profile Image + Initials */}
-          <button
-            onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-3"
-          >
+          
+            <button onClick={() => scrollToSection('hero')} className="flex items-center gap-2">
+            <a href="/profile.jpg" target="_blank" rel="noopener noreferrer"></a>
             <img
               src="/profile.jpg"
               alt="Nikhil Ravuri"
