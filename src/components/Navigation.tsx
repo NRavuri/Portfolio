@@ -16,13 +16,21 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+
+          {/* LOGO BUTTON WITH PROFILE PHOTO */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-2"
           >
-            NR
+            <img
+              src="/profile.jpg"
+              alt="Nikhil Ravuri"
+              className="w-10 h-10 rounded-full object-cover"
+            />
+            <span className="text-lg font-bold hidden sm:block">Nikhil</span>
           </button>
 
+          {/* DESKTOP MENU */}
           <div className="hidden md:flex space-x-8">
             {['about', 'skills', 'experience', 'education', 'projects', 'contact'].map((section) => (
               <button
@@ -35,6 +43,7 @@ export default function Navigation() {
             ))}
           </div>
 
+          {/* MOBILE MENU TOGGLE */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700"
@@ -44,6 +53,7 @@ export default function Navigation() {
         </div>
       </div>
 
+      {/* MOBILE DROPDOWN MENU */}
       {isOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-4 py-4 space-y-3">
